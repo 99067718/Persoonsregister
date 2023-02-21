@@ -78,10 +78,11 @@ var DataPeople = [{
  }
  console.log(Items)
 
-
- document.getElementById("TriggerFilter").onclick = function(){
-   var number = document.getElementById("Filter").innerText
-   for (let index = 0; index < DataPeople.length; index++) {
+var button =  document.getElementById("TriggerFilter")
+   button.onclick = function(){
+   var number = document.getElementById("Filter").value
+   console.log(number)
+   for (let index = 0; index <= DataPeople.length; index++) {
       if (DataPeople[index].leeftijd < number) {
          Items[index].style.display = "none"
       }
