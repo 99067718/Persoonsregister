@@ -77,19 +77,16 @@ var DataPeople = [{
     holder.appendChild(item)
  }
  console.log(Items)
- function Filter(number = 0){
+
+
+ document.getElementById("TriggerFilter").onclick = function(){
+   var number = document.getElementById("Filter").innerText
    for (let index = 0; index < DataPeople.length; index++) {
-      if (isNaN(number)){
-         if (DataPeople[index].leeftijd < number) {
-            Items[index].style.display = "none"
-         }
-         else{
-            Items[index].style.display = "flex"
-         }
+      if (DataPeople[index].leeftijd < number) {
+         Items[index].style.display = "none"
       }
       else{
-         alert("That is not a possible number")
+         Items[index].style.display = "flex"
       }
-    }
+   }
  }
-
